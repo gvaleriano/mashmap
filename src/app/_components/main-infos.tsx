@@ -6,7 +6,7 @@ interface SectionProps {
 }
 export function Causas({ sectionRef }: SectionProps){
   return(
-    <section ref={sectionRef} className="text-blue-900 relative overflow-hidden">
+    <section ref={sectionRef} className="text-blue-900 overflow-hidden">
       <div className="container mx-auto">
         <article className="flex flex-col items-center justify-between lg:flex-row md:flex-row sm:flex-col">
           <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-4 md:p-12">
@@ -14,8 +14,8 @@ export function Causas({ sectionRef }: SectionProps){
           </div>
         </article>
         <article className="flex flex-col items-center justify-between lg:flex-row md:flex-row sm:flex-col">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:p-12">
-            <div className="flex flex-col border-1 border-[#D4ECFF] w-[340px] h-[348px] rounded-2xl p-8 space-y-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:p-12">
+            <div className="flex flex-col border-1 border-[#D4ECFF] rounded-2xl p-8 space-y-4">
               <div className="bg-[#F1F9FF] w-[59px] h-[64px] flex items-center justify-center rounded-sm">
                 <Image width={24} height={24} src={"/bala.svg"} alt="Lupa de pesquisar"></Image>
               </div>
@@ -25,7 +25,7 @@ export function Causas({ sectionRef }: SectionProps){
                 Aumenta o acúmulo de gordura no fígado e estimula processos inflamatórios.
               </p>
             </div>
-            <div className="flex flex-col border-1 border-[#D4ECFF] w-[340px] h-[348px] rounded-2xl p-8 space-y-4">
+            <div className="flex flex-col border-1 border-[#D4ECFF] rounded-2xl p-8 space-y-4">
               <div className="bg-[#F1F9FF] w-[59px] h-[64px] flex items-center justify-center rounded-sm">
                 <Image width={24} height={24} src={"/balanca.svg"} alt="Lupa de pesquisar"></Image>
               </div>
@@ -35,7 +35,7 @@ export function Causas({ sectionRef }: SectionProps){
                 O excesso de gordura corporal aumenta a infiltração de lipídios no fígado.
               </p>
             </div>
-            <div className="flex flex-col border-1 border-[#D4ECFF] w-[340px] h-[348px] rounded-2xl p-8 space-y-4">
+            <div className="flex flex-col border-1 border-[#D4ECFF] rounded-2xl p-8 space-y-4">
               <div className="bg-[#F1F9FF] w-[59px] h-[64px] flex items-center justify-center rounded-sm">
                 <Image width={24} height={24} src={"/frasco.svg"} alt="Lupa de pesquisar"></Image>
               </div>
@@ -45,7 +45,7 @@ export function Causas({ sectionRef }: SectionProps){
                 Lipídios em excesso no sangue favorecem o acúmulo de gordura no fígado.
               </p>
             </div>
-            <div className="flex flex-col border-1 border-[#D4ECFF] w-[340px] h-[348px] rounded-2xl p-8 space-y-4">
+            <div className="flex flex-col border-1 border-[#D4ECFF] rounded-2xl p-8 space-y-4">
               <div className="bg-[#F1F9FF] w-[59px] h-[64px] flex items-center justify-center rounded-sm">
                 <Image width={24} height={24} src={"/pessoas.svg"} alt="Lupa de pesquisar"></Image>
               </div>
