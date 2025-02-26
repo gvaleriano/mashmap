@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import { useEffect, useRef } from "react"
 import { Loader } from "@googlemaps/js-api-loader"
@@ -11,7 +12,7 @@ export function GoogleMaps(){
         })
 
         const { Map } = await loader.importLibrary('maps');
-        const { Marker } = await loader.importLibrary('marker') as google.maps.MarkerLibrary;
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
         const position = {
           lat: -23.55052,
           lng: -46.633309
@@ -25,7 +26,7 @@ export function GoogleMaps(){
 
         const map = new Map(mapRef.current as HTMLDivElement, mapOptions)
         
-        const marker = new Marker({
+        const marker = new AdvancedMarkerElement({
           map: map,
           position: position
         });
