@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
 
 // Esquema de validação com números positivos e mensagem de erro personalizada
 const formSchema = z.object({
@@ -31,7 +32,11 @@ const formSchema = z.object({
     .refine(value => !isNaN(Number(value)) && Number(value) > 0, {
       message: "Os valores não estão no padrão para o cálculo ou o campo está vazio.",
     })
-    .transform(value => Number(value))
+    .transform(value => Number(value)),
+    
+  tipoExame: z.string({
+    required_error: "Selecione um tipo de exame.",
+  })
 })
 
 export function LocalizacaoForm() {
@@ -40,9 +45,9 @@ export function LocalizacaoForm() {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const { cep, cidade } = values;
+    const { cep, cidade, tipoExame } = values;
   
-    console.log(cep, cidade)
+    console.log(cep, cidade, tipoExame)
   }
 
   return (
@@ -91,26 +96,29 @@ export function LocalizacaoForm() {
             )}
           />
 
-          {/* Campo Tipo exame 
+          {/* Campo Tipo exame */}
           <FormField
             control={form.control}
-            name="plaquetas"
+            name="tipoExame"
             render={({ field }) => (
               <FormItem>
-                <FormControl>
-                  <Input
-                    type="number"
-                    placeholder="Plaquetas (X1000/mm3)"
-                    {...field}
-                    value={field.value ?? ""}
-                    onChange={e => field.onChange(e.target.value)}
-                    min="1"
-                  />
-                </FormControl>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Tipo de exame" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent className="w-full bg-white">
+                        <SelectItem value="exame">Exame1</SelectItem>
+                        <SelectItem value="exame2">Exame2</SelectItem>
+                        <SelectItem value="exame3">Exame3</SelectItem>
+                        <SelectItem value="exame4">Exame4</SelectItem>
+                    </SelectContent>
+                  </Select>
                 <FormMessage />
               </FormItem>
             )}
-          />*/}
+          />
           <Button className="w-[159px] h-14 bg-blue-900 text-white rounded-full cursor-pointer font-[Sora] font-bold leading-[24px]">Buscar <Image alt="Saiba Mais" src={"./icon-saiba-mais.svg"} width={32} height={32}></Image></Button>
         </form>
       </Form>

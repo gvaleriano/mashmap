@@ -179,7 +179,7 @@ export function CalculadoraForm() {
           />
           <Button className="w-[159px] h-14 bg-blue-900 text-white rounded-full cursor-pointer font-[Sora] font-bold leading-[24px]">Calcular <Image alt="Saiba Mais" src={"./icon-saiba-mais.svg"} width={32} height={32}></Image></Button>
           {resultado && (
-              <div className="mt-4 p-4 bg-gray-100 rounded">
+              <div className="mt-4 p-4 bg-blue-300 rounded border-dashed border-3  border-blue-900">
                 <p className="font-bold">Resultado FIB-4: {resultado}</p>
                 <p className="mt-2">{resultadoInterpretacao}</p>
               </div>

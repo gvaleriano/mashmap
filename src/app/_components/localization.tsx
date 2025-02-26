@@ -1,3 +1,4 @@
+import { GoogleMaps } from "@/components/google-maps";
 import { LocalizacaoForm } from "@/components/localization-form";
 import Image from "next/image";
 
@@ -20,12 +21,12 @@ export function Localizacao(){
             </div>
           </div>
         </article>
-        <article className="grid grid-cols-1 lg:grid-cols-2 gap-36 relative md:p-12 bg-(--background-secondary) rounded-2xl">
+        <article className="grid grid-cols-1 lg:grid-cols-2 gap-36 md:p-12 bg-(--background-secondary) rounded-2xl">
           <div className="space-y-4">
             <h1 className="font-bold text-2xl leading-9">Agende um exame</h1>
-            <p> - <span className="font-bold">Digite a sua localização</span> e veja a lista de clinicas próximas.</p>
-            <p> - Encontre <span className="font-bold">profissionais qualificados</span> para o melhor atendimento.</p>
-            <p> - <span className="font-bold">Agende sua consulta</span> e cuide da sua saúde antes que a doença evolua.</p>
+            <p> • <span className="font-bold">Digite a sua localização</span> e veja a lista de clinicas próximas.</p>
+            <p> • Encontre <span className="font-bold">profissionais qualificados</span> para o melhor atendimento.</p>
+            <p> • <span className="font-bold">Agende sua consulta</span> e cuide da sua saúde antes que a doença evolua.</p>
             <p className="text-sm">*O mapa engloba apenas o estado de São Paulo</p>
             <div className="bg-white space-y-4 rounded-2xl p-4">
               <LocalizacaoForm/>
@@ -37,7 +38,7 @@ export function Localizacao(){
             </div>
           </div>
           <div className="w-auto h-full bg-white flex justify-center items-center">
-            <h1>MAPA</h1>
+            <GoogleMaps/>
           </div>
         </article>
       </div>

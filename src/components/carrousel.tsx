@@ -13,9 +13,9 @@ const infos = [
     title: "2. Inflamação no Fígado",
     subTitle: "Se a gordura acumulada no fígado causar inflamação e danos celulares, o quadro passa a ser chamado de MASH (Esteato-hepatite associada à disfunção metabólica).",
     subText:[
-      "- O fígado começa a sofrer inflamação crônica, o que pode levar à destruição progressiva das células hepáticas.",
-      "- O organismo responde a essa agressão com um processo de cicatrização.",
-      "- Se a inflamação persistir, pode evoluir para fibrose hepática.",
+      "• O fígado começa a sofrer inflamação crônica, o que pode levar à destruição progressiva das células hepáticas.",
+      "• O organismo responde a essa agressão com um processo de cicatrização.",
+      "• Se a inflamação persistir, pode evoluir para fibrose hepática.",
       "Essa fase ainda é reversível, mas exige tratamento imediato para evitar complicações."
     ]
   },
@@ -23,9 +23,9 @@ const infos = [
     title: "3. Fibrose Hepática",
     subTitle: "Quando a inflamação do fígado persiste, o órgão começa a formar cicatrizes no tecido, caracterizando a fibrose hepática.",
     subText:[
-      "- O fígado tenta se regenerar, mas o processo de cicatrização prejudica seu funcionamento.",
-      "- Com a progressão da fibrose, a circulação sanguínea no fígado fica comprometida.",
-      "- Se não controlada, pode levar à cirrose hepática.",
+      "• O fígado tenta se regenerar, mas o processo de cicatrização prejudica seu funcionamento.",
+      "• Com a progressão da fibrose, a circulação sanguínea no fígado fica comprometida.",
+      "• Se não controlada, pode levar à cirrose hepática.",
       "Nessa fase, os sintomas podem se tornar mais evidentes: cansaço extremo, inchaço abdominal e alteração nos exames hepáticos.",
       "A fibrose pode ser controlada, mas requer acompanhamento médico rigoroso."
     ]
@@ -34,9 +34,9 @@ const infos = [
     title: "4. Cirrose Não Alcoólica",
     subTitle: "A cirrose hepática é o estágio mais avançado da doença hepática gordurosa, onde o fígado já está gravemente comprometido e não consegue mais exercer suas funções corretamente.",
     subText:[
-      "- O fígado perde grande parte da sua capacidade de regeneração.",
-      "- Ocorre um aumento do risco de insuficiência hepática e câncer de fígado.",
-      "- Em casos graves, o único tratamento pode ser o transplante de fígado.",
+      "• O fígado perde grande parte da sua capacidade de regeneração.",
+      "• Ocorre um aumento do risco de insuficiência hepática e câncer de fígado.",
+      "• Em casos graves, o único tratamento pode ser o transplante de fígado.",
       "Nessa fase, os danos já são irreversíveis, mas o tratamento pode retardar a progressão da doença.",
     ]
   },

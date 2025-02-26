@@ -1,11 +1,20 @@
 import Image from "next/image";
+import { RefObject } from "react";
 
-export function Causas(){
+interface SectionProps {
+  sectionRef: RefObject<HTMLElement | null>;
+}
+export function Causas({ sectionRef }: SectionProps){
   return(
-    <section className="text-blue-900 relative overflow-hidden">
+    <section ref={sectionRef} className="text-blue-900 relative overflow-hidden">
       <div className="container mx-auto">
         <article className="flex flex-col items-center justify-between lg:flex-row md:flex-row sm:flex-col">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:p-12">
+          <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-4 md:p-12">
+              <h1 className="font-bold text-[40px]">Principais causas das doenças no fígado.</h1>
+          </div>
+        </article>
+        <article className="flex flex-col items-center justify-between lg:flex-row md:flex-row sm:flex-col">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:p-12">
             <div className="flex flex-col border-1 border-[#D4ECFF] w-[340px] h-[348px] rounded-2xl p-8 space-y-4">
               <div className="bg-[#F1F9FF] w-[59px] h-[64px] flex items-center justify-center rounded-sm">
                 <Image width={24} height={24} src={"/bala.svg"} alt="Lupa de pesquisar"></Image>
@@ -46,9 +55,6 @@ export function Causas(){
                 Pessoas com histórico familiar de doenças hepáticas têm maior risco de desenvolver a inflamação no fígado.
               </p>
             </div>
-          </div>
-          <div className="w-[481px] h-full bg-white flex justify-center items-center">
-            <h1 className="font-bold text-[40px]">Principais causas das doenças no fígado.</h1>
           </div>
         </article>
 
